@@ -1,0 +1,66 @@
+#footer {
+  margin: 30px 11%;
+  text-align: center;
+  font-size: small;
+}
+
+#services {
+  margin: 5%
+}
+
+.container {
+  margin:5px;
+  font-size: small;
+}
+
+.banner {
+  color: white;
+  text-align: center
+}
+
+.service {
+  width: 100%;
+}
+@-webkit-keyframes spaceboots {
+  0% { -webkit-transform: translate(0px, 1px) rotate(0deg) }
+}
+.service:hover,
+.service:focus {
+  -webkit-animation-name: spaceboots;
+  -webkit-animation-duration: 0.8s;
+  -webkit-transform-origin:50% 50%;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  cursor:pointer
+}
+
+.col-3 {
+  padding: 10px
+}
+
+#banner {
+  width: 100%;
+  background-color: #2a315f;
+  margin: 10px 0;
+  text-align: center;
+  color: white;
+}
+
+#bannerheader {
+  background-color: #26A69A
+}
+
+.videoLink {
+  margin: 4px;
+  padding: 5px
+}
+
+#specificUnitValue .el {
+  width: 50px;
+  height: 50px;
+  background-color: white
+}
+
+#footer li {
+  list-style: none
+}
