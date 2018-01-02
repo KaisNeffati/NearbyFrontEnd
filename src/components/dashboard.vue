@@ -15,7 +15,7 @@
                     placeholder="Hire nearby"/>
         </div>
         <q-toolbar-title class="absolute-center	">
-          <router-link to="/" >
+          <router-link to="/">
             <img src="statics/muun-logo-white.png" height="40px" style="color: white; margin:0 auto"/>
           </router-link>
         </q-toolbar-title>
@@ -24,7 +24,7 @@
         </router-link>
         <div class="fab-group">
           <q-fab-action
-            color="secondary"
+            color="primary"
             icon="store"
           >
             <q-chip floating style="font-size: xx-small;background: #8a1d9f;color: white">1</q-chip>
@@ -36,13 +36,13 @@
               -->
               <q-list link class="no-border">
                 <q-item @click="$refs.popover.close()">
-                  <q-item-main label="Remove Card" />
+                  <q-item-main label="Remove Card"/>
                 </q-item>
                 <q-item @click="$refs.popover.close()">
-                  <q-item-main label="Send Feedback" />
+                  <q-item-main label="Send Feedback"/>
                 </q-item>
                 <q-item @click="$refs.popover.close()">
-                  <q-item-main label="Share" />
+                  <q-item-main label="Share"/>
                 </q-item>
               </q-list>
             </q-popover>
@@ -59,13 +59,13 @@
               -->
               <q-list link class="no-border">
                 <q-item @click="$refs.popover.close()">
-                  <q-item-main label="Remove Card" />
+                  <q-item-main label="Remove Card"/>
                 </q-item>
                 <q-item @click="$refs.popover.close()">
-                  <q-item-main label="Send Feedback" />
+                  <q-item-main label="Send Feedback"/>
                 </q-item>
                 <q-item @click="$refs.popover.close()">
-                  <q-item-main label="Share" />
+                  <q-item-main label="Share"/>
                 </q-item>
               </q-list>
             </q-popover>
@@ -80,36 +80,254 @@
             -->
             <q-list link class="no-border">
               <q-item @click="$refs.popover.close()">
-                <q-item-main label="Remove Card" />
+                <q-item-main label="Remove Card"/>
               </q-item>
               <q-item @click="$refs.popover.close()">
-                <q-item-main label="Send Feedback" />
+                <q-item-main label="Send Feedback"/>
               </q-item>
               <q-item @click="$refs.popover.close()">
-                <q-item-main label="Share" />
+                <q-item-main label="Share"/>
               </q-item>
             </q-list>
           </q-popover>
         </q-item-side>
 
       </q-toolbar>
-      <q-toolbar slot="header" style="background: #26a69a">
-        <q-toolbar-title>
-          Layout Header
-          <span slot="subtitle">Optional subtitle</span>
-        </q-toolbar-title>
+      <q-toolbar slot="header" class="category-toolbar">
+        <q-btn flat no-caps>
+          Clothes
+          <q-popover style="margin-top: 5px;" anchor="bottom left" self="top left" ref="popover">
+            <!--
+              The DOM element(s) that make up the popup,
+              in this case a list:
+            -->
+            <q-list link class="no-border">
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Remove Card"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Send Feedback"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Share"/>
+              </q-item>
+            </q-list>
+          </q-popover>
+        </q-btn>
+        <q-btn flat no-caps>
+          SuperMarket
+          <q-popover style="margin-top: 5px;" anchor="bottom left" self="top left" ref="popover">
+            <!--
+              The DOM element(s) that make up the popup,
+              in this case a list:
+            -->
+            <q-list link class="no-border">
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Remove Card"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Send Feedback"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Share"/>
+              </q-item>
+            </q-list>
+          </q-popover>
+        </q-btn>
+        <q-btn flat no-caps>
+          Electornics
+          <q-popover style="margin-top: 5px;" anchor="bottom left" self="top left" ref="popover">
+            <!--
+              The DOM element(s) that make up the popup,
+              in this case a list:
+            -->
+            <q-list link class="no-border">
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Remove Card"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Send Feedback"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Share"/>
+              </q-item>
+            </q-list>
+          </q-popover>
+        </q-btn>
+        <q-btn flat no-caps>
+          Books
+          <q-popover style="margin-top: 5px;" anchor="bottom left" self="top left" ref="popover">
+            <!--
+              The DOM element(s) that make up the popup,
+              in this case a list:
+            -->
+            <q-list link class="no-border">
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Remove Card"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Send Feedback"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Share"/>
+              </q-item>
+            </q-list>
+          </q-popover>
+        </q-btn>
+        <q-btn flat no-caps>
+          Cosmetics
+          <q-popover style="margin-top: 5px;" anchor="bottom left" self="top left" ref="popover">
+            <!--
+              The DOM element(s) that make up the popup,
+              in this case a list:
+            -->
+            <q-list link class="no-border">
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Remove Card"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Send Feedback"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Share"/>
+              </q-item>
+            </q-list>
+          </q-popover>
+        </q-btn>
+        <q-btn flat no-caps>
+          Cooking
+          <q-popover style="margin-top: 5px;" anchor="bottom left" self="top left" ref="popover">
+            <!--
+              The DOM element(s) that make up the popup,
+              in this case a list:
+            -->
+            <q-list link class="no-border">
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Remove Card"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Send Feedback"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Share"/>
+              </q-item>
+            </q-list>
+          </q-popover>
+        </q-btn>
+
+        <q-btn flat no-caps>
+          Decorations
+          <q-popover style="margin-top: 5px;" anchor="bottom left" self="top left" ref="popover">
+            <!--
+              The DOM element(s) that make up the popup,
+              in this case a list:
+            -->
+            <q-list link class="no-border">
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Remove Card"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Send Feedback"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Share"/>
+              </q-item>
+            </q-list>
+          </q-popover>
+        </q-btn>
+
+        <q-btn flat no-caps>
+          Games
+          <q-popover style="margin-top: 5px;" anchor="bottom left" self="top left" ref="popover">
+            <!--
+              The DOM element(s) that make up the popup,
+              in this case a list:
+            -->
+            <q-list link class="no-border">
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Remove Card"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Send Feedback"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Share"/>
+              </q-item>
+            </q-list>
+          </q-popover>
+        </q-btn>
+        <q-btn flat no-caps>
+          Automative
+          <q-popover style="margin-top: 5px;" anchor="bottom left" self="top left" ref="popover">
+            <!--
+              The DOM element(s) that make up the popup,
+              in this case a list:
+            -->
+            <q-list link class="no-border">
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Remove Card"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Send Feedback"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Share"/>
+              </q-item>
+            </q-list>
+          </q-popover>
+        </q-btn>
+        <q-btn flat no-caps>
+          Houses, Flats and Rooms
+          <q-popover style="margin-top: 5px;" anchor="bottom left" self="top left" ref="popover">
+            <!--
+              The DOM element(s) that make up the popup,
+              in this case a list:
+            -->
+            <q-list link class="no-border">
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Remove Card"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Send Feedback"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Share"/>
+              </q-item>
+            </q-list>
+          </q-popover>
+        </q-btn>
+        <q-btn flat no-caps>
+          Other
+          <q-popover style="margin-top: 5px;" anchor="bottom left" self="top left" ref="popover">
+            <!--
+              The DOM element(s) that make up the popup,
+              in this case a list:
+            -->
+            <q-list link class="no-border">
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Remove Card"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Send Feedback"/>
+              </q-item>
+              <q-item @click="$refs.popover.close()">
+                <q-item-main label="Share"/>
+              </q-item>
+            </q-list>
+          </q-popover>
+        </q-btn>
       </q-toolbar>
       <div class="row">
         <div class="col-3">
-          <q-card color="secondary">
-            <q-card-media >
+          <q-card>
+            <q-card-media>
               <img src="../assets/img/background.png">
             </q-card-media>
-            <q-item-side id="avatar" avatar="/statics/boy-avatar.png" />
+            <q-item-side id="avatar" avatar="/statics/Profile_avatar_placeholder_large.png"/>
             <q-card-title><br>
               Kais NEFFATI
               <span slot="subtitle">Subtitle</span>
-              <q-icon slot="right" name="euro_symbol" />
+              <q-icon slot="right" name="euro_symbol"/>
             </q-card-title>
             <q-card-main style="padding: 0;">
               <q-list no-border>
@@ -132,11 +350,446 @@
             </q-card-main>
           </q-card>
         </div>
-        <div class="col-9">
-
+        <div class="col-9" style="padding: 1%;">
+          <q-carousel arrows dots actions class="text-white">
+            <div slot="slide" class="bg-primary" style="padding: 0">
+              <img src="../assets/banner.png" width="100%" height="100%"/>
+            </div>
+            <div slot="slide" class="bg-secondary" style="padding: 0">
+              <img src="../assets/banner1.png" width="100%" height="100%"/>
+            </div>
+            <div slot="slide" class="bg-tertiary" style="padding: 0">
+              <img src="../assets/banner2.png" width="100%" height="100%"/>
+            </div>
+            <q-icon slot="action" name="camera_enhance"/>
+            <q-icon slot="action" name="bookmark_border"/>
+            <q-icon slot="action" name="add_shopping_cart"/>
+          </q-carousel>
+          <q-card inline style="width: 23%">
+            <q-card-title>
+              <div style="display: flow-root;">
+                <div style="float:left;font-size: x-small; color: #26A69A">
+                  <q-icon name="place"/>
+                  Rue de Zeroud
+                </div>
+                <div style="float: right;font-size: medium;color: #ffc107" class="row items-center">
+                  100
+                  <q-icon name="euro_symbol"/>
+                </div>
+              </div>
+              Demand title
+              <div>
+                <div style="float: right;font-size: medium;color: #ffc107;padding-top: 4%;" class="row items-center">
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star_border"/>
+                </div>
+                <div style="font-size: x-small;" class="row items-center">
+                  <q-item-side class="post-avatar" avatar="/statics/Profile_avatar_placeholder_large.png" />
+                  Kais NEFFATI
+                </div>
+              </div>
+            </q-card-title>
+            <q-card-main>
+              <q-tabs no-pane-border inverted align="left">
+                <q-tab default no-caps name="tab-1" style="font-size: xx-small" slot="title" label="Description"/>
+                <q-tab no-caps name="tab-2" style="font-size: xx-small" slot="title" label="DETAILS"/>
+                <q-tab-pane name="tab-1">Lorem deserunt mollit anim id est laborum.</q-tab-pane>
+                <q-tab-pane name="tab-2">
+                  Lorem ipsum tat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </q-tab-pane>
+              </q-tabs>
+            </q-card-main>
+            <q-card-separator/>
+            <q-card-actions align="between">
+              <q-btn color="secondary">
+                <q-icon name="place"/></q-btn>
+              <q-btn color="tertiary">Make offer</q-btn>
+            </q-card-actions>
+          </q-card>
+          <q-card inline style="width: 23%">
+            <q-card-title>
+              <div style="display: flow-root;">
+                <div style="float:left;font-size: x-small; color: #26A69A">
+                  <q-icon name="place"/>
+                  Rue de Zeroud
+                </div>
+                <div style="float: right;font-size: medium;color: #ffc107" class="row items-center">
+                  100
+                  <q-icon name="euro_symbol"/>
+                </div>
+              </div>
+              Demand title
+              <div>
+                <div style="float: right;font-size: medium;color: #ffc107;padding-top: 4%;" class="row items-center">
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star_border"/>
+                </div>
+                <div style="font-size: x-small;" class="row items-center">
+                  <q-item-side class="post-avatar" avatar="/statics/Profile_avatar_placeholder_large.png" />
+                  Kais NEFFATI
+                </div>
+              </div>
+            </q-card-title>
+            <q-card-main>
+              <q-tabs no-pane-border inverted align="left">
+                <q-tab default no-caps name="tab-1" style="font-size: xx-small" slot="title" label="Description"/>
+                <q-tab no-caps name="tab-2" style="font-size: xx-small" slot="title" label="DETAILS"/>
+                <q-tab-pane name="tab-1">Lorem deserunt mollit anim id est laborum.</q-tab-pane>
+                <q-tab-pane name="tab-2">
+                  Lorem ipsum tat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </q-tab-pane>
+              </q-tabs>
+            </q-card-main>
+            <q-card-separator/>
+            <q-card-actions>
+              <q-btn color="tertiary" class="full-width">Make offer</q-btn>
+            </q-card-actions>
+          </q-card>
+          <q-card inline style="width: 23%">
+            <q-card-title>
+              <div style="display: flow-root;">
+                <div style="float:left;font-size: x-small; color: #26A69A">
+                  <q-icon name="place"/>
+                  Rue de Zeroud
+                </div>
+                <div style="float: right;font-size: medium;color: #ffc107" class="row items-center">
+                  100
+                  <q-icon name="euro_symbol"/>
+                </div>
+              </div>
+              Demand title
+              <div>
+                <div style="float: right;font-size: medium;color: #ffc107;padding-top: 4%;" class="row items-center">
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star_border"/>
+                </div>
+                <div style="font-size: x-small;" class="row items-center">
+                  <q-item-side class="post-avatar" avatar="/statics/Profile_avatar_placeholder_large.png" />
+                  Kais NEFFATI
+                </div>
+              </div>
+            </q-card-title>
+            <q-card-main>
+              <q-tabs no-pane-border inverted align="left">
+                <q-tab default no-caps name="tab-1" style="font-size: xx-small" slot="title" label="Description"/>
+                <q-tab no-caps name="tab-2" style="font-size: xx-small" slot="title" label="DETAILS"/>
+                <q-tab-pane name="tab-1">Lorem deserunt mollit anim id est laborum.</q-tab-pane>
+                <q-tab-pane name="tab-2">
+                  Lorem ipsum tat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </q-tab-pane>
+              </q-tabs>
+            </q-card-main>
+            <q-card-separator/>
+            <q-card-actions>
+              <q-btn color="tertiary" class="full-width">Make offer</q-btn>
+            </q-card-actions>
+          </q-card>
+          <q-card inline style="width: 23%">
+            <q-card-title>
+              <div style="display: flow-root;">
+                <div style="float:left;font-size: x-small; color: #26A69A">
+                  <q-icon name="place"/>
+                  Rue de Zeroud
+                </div>
+                <div style="float: right;font-size: medium;color: #ffc107" class="row items-center">
+                  100
+                  <q-icon name="euro_symbol"/>
+                </div>
+              </div>
+              Demand title
+              <div>
+                <div style="float: right;font-size: medium;color: #ffc107;padding-top: 4%;" class="row items-center">
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star_border"/>
+                </div>
+                <div style="font-size: x-small;" class="row items-center">
+                  <q-item-side class="post-avatar" avatar="/statics/Profile_avatar_placeholder_large.png" />
+                  Kais NEFFATI
+                </div>
+              </div>
+            </q-card-title>
+            <q-card-main>
+              <q-tabs no-pane-border inverted align="left">
+                <q-tab default no-caps name="tab-1" style="font-size: xx-small" slot="title" label="Description"/>
+                <q-tab no-caps name="tab-2" style="font-size: xx-small" slot="title" label="DETAILS"/>
+                <q-tab-pane name="tab-1">Lorem deserunt mollit anim id est laborum.</q-tab-pane>
+                <q-tab-pane name="tab-2">
+                  Lorem ipsum tat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </q-tab-pane>
+              </q-tabs>
+            </q-card-main>
+            <q-card-separator/>
+            <q-card-actions>
+              <q-btn color="tertiary" class="full-width">Make offer</q-btn>
+            </q-card-actions>
+          </q-card>
+          <q-card inline style="width: 23%">
+            <q-card-title>
+              <div style="display: flow-root;">
+                <div style="float:left;font-size: x-small; color: #26A69A">
+                  <q-icon name="place"/>
+                  Rue de Zeroud
+                </div>
+                <div style="float: right;font-size: medium;color: #ffc107" class="row items-center">
+                  100
+                  <q-icon name="euro_symbol"/>
+                </div>
+              </div>
+              Demand title
+              <div>
+                <div style="float: right;font-size: medium;color: #ffc107;padding-top: 4%;" class="row items-center">
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star_border"/>
+                </div>
+                <div style="font-size: x-small;" class="row items-center">
+                  <q-item-side class="post-avatar" avatar="/statics/Profile_avatar_placeholder_large.png" />
+                  Kais NEFFATI
+                </div>
+              </div>
+            </q-card-title>
+            <q-card-main>
+              <q-tabs no-pane-border inverted align="left">
+                <q-tab default no-caps name="tab-1" style="font-size: xx-small" slot="title" label="Description"/>
+                <q-tab no-caps name="tab-2" style="font-size: xx-small" slot="title" label="DETAILS"/>
+                <q-tab-pane name="tab-1">Lorem deserunt mollit anim id est laborum.</q-tab-pane>
+                <q-tab-pane name="tab-2">
+                  Lorem ipsum tat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </q-tab-pane>
+              </q-tabs>
+            </q-card-main>
+            <q-card-separator/>
+            <q-card-actions>
+              <q-btn color="tertiary" class="full-width">Make offer</q-btn>
+            </q-card-actions>
+          </q-card>
+          <q-card inline style="width: 23%">
+            <q-card-title>
+              <div style="display: flow-root;">
+                <div style="float:left;font-size: x-small; color: #26A69A">
+                  <q-icon name="place"/>
+                  Rue de Zeroud
+                </div>
+                <div style="float: right;font-size: medium;color: #ffc107" class="row items-center">
+                  100
+                  <q-icon name="euro_symbol"/>
+                </div>
+              </div>
+              Demand title
+              <div>
+                <div style="float: right;font-size: medium;color: #ffc107;padding-top: 4%;" class="row items-center">
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star_border"/>
+                </div>
+                <div style="font-size: x-small;" class="row items-center">
+                  <q-item-side class="post-avatar" avatar="/statics/Profile_avatar_placeholder_large.png" />
+                  Kais NEFFATI
+                </div>
+              </div>
+            </q-card-title>
+            <q-card-main>
+              <q-tabs no-pane-border inverted align="left">
+                <q-tab default no-caps name="tab-1" style="font-size: xx-small" slot="title" label="Description"/>
+                <q-tab no-caps name="tab-2" style="font-size: xx-small" slot="title" label="DETAILS"/>
+                <q-tab-pane name="tab-1">Lorem deserunt mollit anim id est laborum.</q-tab-pane>
+                <q-tab-pane name="tab-2">
+                  Lorem ipsum tat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </q-tab-pane>
+              </q-tabs>
+            </q-card-main>
+            <q-card-separator/>
+            <q-card-actions>
+              <q-btn color="tertiary" class="full-width">Make offer</q-btn>
+            </q-card-actions>
+          </q-card>
+          <q-card inline style="width: 23%">
+            <q-card-title>
+              <div style="display: flow-root;">
+                <div style="float:left;font-size: x-small; color: #26A69A">
+                  <q-icon name="place"/>
+                  Rue de Zeroud
+                </div>
+                <div style="float: right;font-size: medium;color: #ffc107" class="row items-center">
+                  100
+                  <q-icon name="euro_symbol"/>
+                </div>
+              </div>
+              Demand title
+              <div>
+                <div style="float: right;font-size: medium;color: #ffc107;padding-top: 4%;" class="row items-center">
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star_border"/>
+                </div>
+                <div style="font-size: x-small;" class="row items-center">
+                  <q-item-side class="post-avatar" avatar="/statics/Profile_avatar_placeholder_large.png" />
+                  Kais NEFFATI
+                </div>
+              </div>
+            </q-card-title>
+            <q-card-main>
+              <q-tabs no-pane-border inverted align="left">
+                <q-tab default no-caps name="tab-1" style="font-size: xx-small" slot="title" label="Description"/>
+                <q-tab no-caps name="tab-2" style="font-size: xx-small" slot="title" label="DETAILS"/>
+                <q-tab-pane name="tab-1">Lorem deserunt mollit anim id est laborum.</q-tab-pane>
+                <q-tab-pane name="tab-2">
+                  Lorem ipsum tat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </q-tab-pane>
+              </q-tabs>
+            </q-card-main>
+            <q-card-separator/>
+            <q-card-actions>
+              <q-btn color="tertiary" class="full-width">Make offer</q-btn>
+            </q-card-actions>
+          </q-card>
+          <q-card inline style="width: 23%">
+            <q-card-title>
+              <div style="display: flow-root;">
+                <div style="float:left;font-size: x-small; color: #26A69A">
+                  <q-icon name="place"/>
+                  Rue de Zeroud
+                </div>
+                <div style="float: right;font-size: medium;color: #ffc107" class="row items-center">
+                  100
+                  <q-icon name="euro_symbol"/>
+                </div>
+              </div>
+              Demand title
+              <div>
+                <div style="float: right;font-size: medium;color: #ffc107;padding-top: 4%;" class="row items-center">
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star_border"/>
+                </div>
+                <div style="font-size: x-small;" class="row items-center">
+                  <q-item-side class="post-avatar" avatar="/statics/Profile_avatar_placeholder_large.png" />
+                  Kais NEFFATI
+                </div>
+              </div>
+            </q-card-title>
+            <q-card-main>
+              <q-tabs no-pane-border inverted align="left">
+                <q-tab default no-caps name="tab-1" style="font-size: xx-small" slot="title" label="Description"/>
+                <q-tab no-caps name="tab-2" style="font-size: xx-small" slot="title" label="DETAILS"/>
+                <q-tab-pane name="tab-1">Lorem deserunt mollit anim id est laborum.</q-tab-pane>
+                <q-tab-pane name="tab-2">
+                  Lorem ipsum tat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </q-tab-pane>
+              </q-tabs>
+            </q-card-main>
+            <q-card-separator/>
+            <q-card-actions>
+              <q-btn color="tertiary" class="full-width">Make offer</q-btn>
+            </q-card-actions>
+          </q-card>
+          <q-card inline style="width: 23%">
+            <q-card-title>
+              <div style="display: flow-root;">
+                <div style="float:left;font-size: x-small; color: #26A69A">
+                  <q-icon name="place"/>
+                  Rue de Zeroud
+                </div>
+                <div style="float: right;font-size: medium;color: #ffc107" class="row items-center">
+                  100
+                  <q-icon name="euro_symbol"/>
+                </div>
+              </div>
+              Demand title
+              <div>
+                <div style="float: right;font-size: medium;color: #ffc107;padding-top: 4%;" class="row items-center">
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star_border"/>
+                </div>
+                <div style="font-size: x-small;" class="row items-center">
+                  <q-item-side class="post-avatar" avatar="/statics/Profile_avatar_placeholder_large.png" />
+                  Kais NEFFATI
+                </div>
+              </div>
+            </q-card-title>
+            <q-card-main>
+              <q-tabs no-pane-border inverted align="left">
+                <q-tab default no-caps name="tab-1" style="font-size: xx-small" slot="title" label="Description"/>
+                <q-tab no-caps name="tab-2" style="font-size: xx-small" slot="title" label="DETAILS"/>
+                <q-tab-pane name="tab-1">Lorem deserunt mollit anim id est laborum.</q-tab-pane>
+                <q-tab-pane name="tab-2">
+                  Lorem ipsum tat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </q-tab-pane>
+              </q-tabs>
+            </q-card-main>
+            <q-card-separator/>
+            <q-card-actions>
+              <q-btn color="tertiary" class="full-width">Make offer</q-btn>
+            </q-card-actions>
+          </q-card>
+          <q-card inline style="width: 23%">
+            <q-card-title>
+              <div style="display: flow-root;">
+                <div style="float:left;font-size: x-small; color: #26A69A">
+                  <q-icon name="place"/>
+                  Rue de Zeroud
+                </div>
+                <div style="float: right;font-size: medium;color: #ffc107" class="row items-center">
+                  100
+                  <q-icon name="euro_symbol"/>
+                </div>
+              </div>
+              Demand title
+              <div>
+                <div style="float: right;font-size: medium;color: #ffc107;padding-top: 4%;" class="row items-center">
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star"/>
+                  <q-icon name="star_border"/>
+                </div>
+                <div style="font-size: x-small;" class="row items-center">
+                  <q-item-side class="post-avatar" avatar="/statics/Profile_avatar_placeholder_large.png" />
+                  Kais NEFFATI
+                </div>
+              </div>
+            </q-card-title>
+            <q-card-main>
+              <q-tabs no-pane-border inverted align="left">
+                <q-tab default no-caps name="tab-1" style="font-size: xx-small" slot="title" label="Description"/>
+                <q-tab no-caps name="tab-2" style="font-size: xx-small" slot="title" label="DETAILS"/>
+                <q-tab-pane name="tab-1">Lorem deserunt mollit anim id est laborum.</q-tab-pane>
+                <q-tab-pane name="tab-2">
+                  Lorem ipsum tat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </q-tab-pane>
+              </q-tabs>
+            </q-card-main>
+            <q-card-separator/>
+            <q-card-actions>
+              <q-btn color="tertiary" class="full-width">Make offer</q-btn>
+            </q-card-actions>
+          </q-card>
         </div>
       </div>
-        <router-view/>
+      <router-view/>
       <q-toolbar slot="footer">
         <q-toolbar-title>
           <footer class="page-footer">
@@ -154,6 +807,13 @@
 
 <script>
   import {
+    QCardSeparator,
+    QCardActions,
+    QTabs,
+    QTab,
+    QTabPane,
+    QRating,
+    QCarousel,
     QCollapsible,
     QFab,
     QFabAction,
@@ -165,7 +825,6 @@
     QToolbar,
     QToolbarTitle,
     QSearch,
-    QTabs,
     QRouteTab,
     QBtn,
     QIcon,
@@ -189,6 +848,12 @@
 
   export default {
     components: {
+      QCardSeparator,
+      QCardActions,
+      QTab,
+      QTabPane,
+      QRating,
+      QCarousel,
       QCollapsible,
       QFab,
       QFabAction,
@@ -221,6 +886,7 @@
     },
     data () {
       return {
+        stars: 0,
         layoutStore,
         text: '',
         gallery: [
@@ -244,26 +910,49 @@
 <style scoped>
   #avatar {
     position: absolute;
-    top: 20%;
+    margin-top: -45px;
     left: 9%;
   }
+
+  .post-avatar {
+    width: 25px !important;
+    height: 25px !important;
+  }
+  .post-avatar img {
+    width: 25px !important;
+    height: 25px !important;
+  }
+
   .fab-group button {
     border-radius: 0%;
   }
+
   #avatar img {
     width: 80px;
     height: 80px;
   }
+
   svg {
     display: table;
     margin: 0 auto;
   }
+
   .top-avatar {
     margin-bottom: -6px;
   }
+
   .top-avatar img {
     height: 40px;
     width: 40px;
     border-radius: 0%;
+  }
+
+  .category-toolbar {
+    background: #26a69a;
+    min-height: 25px;
+  }
+
+  .q-toolbar button {
+    min-height: 25px;
   }
 </style>

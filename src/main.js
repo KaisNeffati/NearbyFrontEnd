@@ -14,9 +14,27 @@ import Vue from 'vue'
 import Quasar from 'quasar'
 import router from './router'
 import anime from 'animejs'
+import * as VueGoogleMaps from 'vue2-google-maps'
+import VueAnimateNumber from 'vue-animate-number'
+
+import 'quasar-extras/animate/zoomIn.css'
+import 'quasar-extras/animate/bounceInRight.css'
+import 'quasar-extras/animate/bounceOutLeft.css'
+import store from './store'
 
 Vue.config.productionTip = false
 Vue.use(Quasar) // Install Quasar Framework
+Vue.use(VueAnimateNumber)
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyAck55kVM1DZNvQ9DFc5kdjBz0cAgjnbiY',
+    libraries: 'places' // This is required if you use the Autocomplete plugin
+    // OR: libraries: 'places,drawing'
+    // OR: libraries: 'places,drawing,visualization'
+    // (as you require)
+  }
+}) // Vue google map
 
 // animeJs
 Vue.use(anime)
@@ -34,6 +52,7 @@ Quasar.start(() => {
   new Vue({
     el: '#q-app',
     router,
+    store,
     render: h => h(require('./App'))
   })
 })

@@ -23,6 +23,32 @@ export default new VueRouter({
 
   routes: [
     {path: '/dashboard', component: load('dashboard')},
+    {path: '/dashboard1', component: load('dashboard1')},
+    {
+      path: '/dashboard2',
+      component: load('dashboardLayout'),
+      children: [
+        {
+          // UserProfile will be rendered inside User's <router-view>
+          // when /user/:id/profile is matched
+          path: '',
+          component: load('dashboard2')
+        },
+        {
+          // UserProfile will be rendered inside User's <router-view>
+          // when /user/:id/profile is matched
+          path: '/deliverForm',
+          component: load('deliverForm')
+        },
+        {
+          // UserPosts will be rendered inside User's <router-view>
+          // when /user/:id/posts is matched
+          path: '/profile',
+          component: load('profile')
+        }
+      ]
+    },
+    {path: '/profile', component: load('profile')},
     {
       path: '/',
       component: load('index'),

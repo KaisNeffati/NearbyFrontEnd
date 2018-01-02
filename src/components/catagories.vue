@@ -1,7 +1,7 @@
 <template>
 
   <div id="services">
-    <h5 style="text-align: center"><strong>What service are you looking for !</strong></h5>
+    <h5 style="text-align: center"><strong>What are you looking for !</strong></h5>
     <p style="text-align: center">Build your own business network</p>
     <div class="row">
       <div class="col-3">
@@ -87,4 +87,7 @@
 </script>
 
 <style>
+  .service {
+    height: 200px;
+  }
 </style>

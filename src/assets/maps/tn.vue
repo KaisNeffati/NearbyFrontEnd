@@ -372,7 +372,6 @@
 <circle id="_x31_" class="st0" cx="120.6" cy="41.1" r="0"/>
 <circle id="_x32_" class="st0" cx="80.3" cy="90.2" r="0"/>
 </svg>
-
 </template>
 
 <script>
