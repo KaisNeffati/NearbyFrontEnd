@@ -1,10 +1,13 @@
 <template>
   <q-stepper color="secondary" ref="stepper" alternative-labels>
     <q-step default name="first" title="Delivery details" active-icon="shopping_basket">
-      <q-input v-model="email" type="email" color="tertiary" inverted placeholder="something ..." stack-label="Title"
+      <q-input v-model="email" type="text" color="tertiary" inverted placeholder="something ..." stack-label="Title"
                prefix="I am delivering"/>
-      <q-input type="number" align="right" suffix="EUR" inverted color="brown"
-               stack-label="Starting from"/>
+      <q-input v-model="description" type="textarea"
+               :max-height="100"
+               :min-rows="3"
+               :max-length="250"
+               color="tertiary" inverted placeholder="Describe your Service ..." stack-label="Description"/>
       <q-stepper-navigation>
         <q-btn color="secondary" @click="$refs.stepper.next()">Continue</q-btn>
       </q-stepper-navigation>
@@ -16,13 +19,13 @@
         float-label=""
         hide-upload-button
         :after="[
-    {
-      icon: 'warning',
-      handler () {
-        // do something...
-      }
-    }
-  ]"
+        {
+          icon: 'warning',
+          handler () {
+            // do something...
+          }
+        }
+        ]"
       />
       <q-stepper-navigation>
         <q-btn color="secondary" @click="$refs.stepper.next()">Next</q-btn>
@@ -47,8 +50,73 @@
         <q-btn color="secondary" flat @click="$refs.stepper.previous()">Back</q-btn>
       </q-stepper-navigation>
     </q-step>
-    <q-step name="fifth" disable title="Disabled">
-      <div v-for="n in 3">Step 4</div>
+    <q-step name="fifth" icon="motorcycle" title="Deliveries">
+      <q-toolbar color="secondary">
+        <label style="font-size:xx-large">
+          {{deliveries.length}}
+        </label>
+        <q-toolbar-title>
+          Deliveries
+          <span slot="subtitle">
+            Add all your items
+          </span>
+        </q-toolbar-title>
+        <q-btn flat @click="deliveries.push(Object.assign({}, defaultDelivery))">
+          <q-icon name="add"/>
+        </q-btn>
+      </q-toolbar>
+      <q-card style="margin: 0">
+        <q-card-main>
+          <div v-for="delivery in deliveries">
+            <q-card v-if="delivery">
+              <q-card-title>
+                Delivery Item
+                <q-btn slot="right" flat @click="deliveries.splice(deliveries.indexOf(delivery), 1)">
+                  <q-icon name="clear"/>
+                </q-btn>
+              </q-card-title>
+              <q-card-main>
+                <q-input v-model="delivery.title" type="text" color="tertiary" inverted placeholder="something ..."
+                         stack-label="Title"/>
+                <div class="row">
+                  <div class="col-3" style="padding: 10px 5px 0 0;">
+                    <q-select
+                      style="margin: 2% 0;"
+                      inverted
+                      v-model="delivery.currency"
+                      color="tertiary"
+                      stack-label="Currency"
+                      :options="selectOptions"
+                    />
+                  </div>
+                  <div class="col-9">
+                    <q-input type="number" v-model="delivery.price" align="right" :suffix="delivery.currency" inverted
+                             color="tertiary"
+                             stack-label="Price"/>
+                  </div>
+                </div>
+                <p class="caption">Refine delivery quantity range (in UNIT)</p>
+                <q-range
+                  color="secondary"
+                  v-model="delivery.rangeValues"
+                  :min="0"
+                  :max="100"
+                  :step="1"
+                  snap
+                  label-always
+                />
+                <q-uploader
+                  multiple
+                  color="tertiary"
+                  float-label=""
+                  hide-upload-button
+                  :after="[{icon: 'warning',handler () {}}]"
+                />
+              </q-card-main>
+            </q-card>
+          </div>
+        </q-card-main>
+      </q-card>
       <q-stepper-navigation>
         <q-btn color="secondary" @click="$refs.stepper.next()">Next</q-btn>
         <q-btn color="secondary" flat @click="$refs.stepper.previous()">Back</q-btn>
@@ -66,6 +134,15 @@
 
 <script>
   import {
+    QSelect,
+    QRange,
+    QToolbar,
+    QToolbarTitle,
+    QIcon,
+    QCard,
+    QCardTitle,
+    QCardSeparator,
+    QCardMain,
     QStepper,
     QStep,
     QStepperNavigation,
@@ -76,6 +153,15 @@
   } from 'quasar'
   export default {
     components: {
+      QSelect,
+      QRange,
+      QToolbar,
+      QToolbarTitle,
+      QIcon,
+      QCard,
+      QCardTitle,
+      QCardSeparator,
+      QCardMain,
       QStepper,
       QStep,
       QStepperNavigation,
@@ -86,7 +172,40 @@
     },
     data () {
       return {
+        selectOptions: [
+          {
+            label: 'EUR',
+            value: 'EUR'
+          },
+          {
+            label: 'USD',
+            value: 'USD'
+          }],
+        defaultDelivery: {
+          id: 1,
+          title: '',
+          price: '',
+          currency: '',
+          rangeValues: {
+            min: 5,
+            max: 50
+          }
+        },
+        deliveries: [
+          {
+            id: 1,
+            title: '',
+            price: '',
+            currency: '',
+            rangeValues: {
+              min: 5,
+              max: 50
+            }
+          }
+        ],
+        counter: 3,
         email: '',
+        description: '',
         edited: null,
         initcircle: {
           center: {lat: 36.804449, lng: 10.182280},
